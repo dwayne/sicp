@@ -7,7 +7,7 @@
       0
       y))
 
-; (test 0 (p))
+;; (test 0 (p))
 
 ;; For applicative-order evaluation we get an infinite loop
 ;; since the procedure p will be evaluated.
