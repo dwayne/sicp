@@ -1,4 +1,6 @@
 ;;;; Exercise 1.15
+;;;;
+;;;; $ csi -s ex1-15.scm
 
 (define (cube x) (* x x x))
 
@@ -10,7 +12,7 @@
       angle
       (p (sine (/ angle 3.0)))))
 
-(sine 12.15)
+(print (sine 12.15))
 
 ;; a. The procedure p is applied 5 times when (sine 12.15)
 ;;    is evaluated. Reasoning: We need to find the smallest
