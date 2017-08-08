@@ -1,4 +1,4 @@
-#lang sicp
+#lang racket
 
 ;;;; Finding fixed points of functions
 

@@ -1,4 +1,4 @@
-#lang sicp
+#lang racket
 
 ;;;; Exercise 2.38
 
@@ -54,11 +54,11 @@
 (= (fold-left / 1 (list 1 2 3))
    (/ 1 6))
 
-(equal? (fold-right list nil (list 1 2 3))
-        (list 1 (list 2 (list 3 nil))))
+(equal? (fold-right list '() (list 1 2 3))
+        (list 1 (list 2 (list 3 '()))))
 
-(equal? (fold-left list nil (list 1 2 3))
-        (list (list (list nil 1) 2) 3))
+(equal? (fold-left list '() (list 1 2 3))
+        (list (list (list '() 1) 2) 3))
 
 ; op should be associative (and commutative with at least initial) to guarantee
 ; that fold-right and fold-left produce the same values for any sequence

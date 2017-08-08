@@ -1,8 +1,7 @@
-#lang sicp
+#lang racket
 
 ;;;; Exercise 2.40
 
-(#%require racket/base) ; for filter
 (#%require math/number-theory) ; for prime?
 
 (define (accumulate op initial sequence)
@@ -12,11 +11,11 @@
           (accumulate op initial (cdr sequence)))))
 
 (define (flatmap proc sequence)
-  (accumulate append nil (map proc sequence)))
+  (accumulate append '() (map proc sequence)))
 
 (define (enumerate-interval low high)
   (if (> low high)
-      nil
+      '()
       (cons low (enumerate-interval (+ low 1) high))))
 
 (define (unique-pairs n)

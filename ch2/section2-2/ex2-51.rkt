@@ -1,4 +1,5 @@
-#lang sicp
+#lang racket
+
 (#%require sicp-pict)
 
 ;;;; Exercise 2.51

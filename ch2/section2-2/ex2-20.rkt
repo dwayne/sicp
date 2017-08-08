@@ -1,11 +1,11 @@
-#lang sicp
+#lang racket
 
 ;;;; Exercise 2.20
 
 (define (same-parity x . rest)
   (define (group-by pred? xs)
     (if (null? xs)
-        nil
+        '()
         (let ((x (car xs)))
           (cond ((pred? x)
                  (cons x (group-by pred? (cdr xs))))

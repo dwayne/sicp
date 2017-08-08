@@ -1,4 +1,4 @@
-#lang sicp
+#lang racket
 
 ;;;; Section 1.2.4
 ;;;; Exponentiation

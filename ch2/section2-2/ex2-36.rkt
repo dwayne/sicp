@@ -1,4 +1,4 @@
-#lang sicp
+#lang racket
 
 ;;;; Exercise 2.36
 
@@ -10,7 +10,7 @@
 
 (define (accumulate-n op initial sequences)
   (if (null? (car sequences))
-      nil
+      '()
       (cons (accumulate op initial (map car sequences))
             (accumulate-n op initial (map cdr sequences)))))
 

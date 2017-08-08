@@ -1,4 +1,4 @@
-#lang sicp
+#lang racket
 
 ;;;; Exercise 2.39
 
@@ -17,17 +17,17 @@
   (iter initial sequence))
 
 (define (reverse-1 sequence)
-  (fold-right (lambda (x y) (append y (list x))) nil sequence))
+  (fold-right (lambda (x y) (append y (list x))) '() sequence))
 
-(reverse-1 nil)
+(reverse-1 '())
 (reverse-1 (list 1))
 (reverse-1 (list 1 2))
 (reverse-1 (list 1 2 3 4 5))
 
 (define (reverse-2 sequence)
-  (fold-left (lambda (x y) (cons y x)) nil sequence))
+  (fold-left (lambda (x y) (cons y x)) '() sequence))
 
-(reverse-2 nil)
+(reverse-2 '())
 (reverse-2 (list 1))
 (reverse-2 (list 1 2))
 (reverse-2 (list 1 2 3 4 5))

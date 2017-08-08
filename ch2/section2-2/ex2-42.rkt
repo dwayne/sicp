@@ -1,8 +1,6 @@
-#lang sicp
+#lang racket
 
 ;;;; Exercise 2.42
-
-(#%require racket/base) ; for filter
 
 (define (accumulate op initial sequence)
   (if (null? sequence)
@@ -11,11 +9,11 @@
           (accumulate op initial (cdr sequence)))))
 
 (define (flatmap proc sequence)
-  (accumulate append nil (map proc sequence)))
+  (accumulate append '() (map proc sequence)))
 
 (define (enumerate-interval low high)
   (if (> low high)
-      nil
+      '()
       (cons low (enumerate-interval (+ low 1) high))))
 
 ;; A solution to the "eight-queens puzzle"
@@ -34,7 +32,7 @@
           (queen-cols (- k 1))))))
   (queen-cols board-size))
 
-(define empty-board nil)
+(define empty-board '())
 
 (define (adjoin-position row col positions)
   (cons (list row col) positions))

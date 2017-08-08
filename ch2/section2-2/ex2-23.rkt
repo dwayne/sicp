@@ -1,4 +1,4 @@
-#lang sicp
+#lang racket
 
 ;;;; Exercise 2.23
 
@@ -8,5 +8,5 @@
          (proc (car xs))
          (for-each proc (cdr xs)))))
 
-(for-each (lambda (x) (newline) (display x))
+(for-each (lambda (x) (display x) (newline))
           (list 57 321 88))

@@ -1,4 +1,4 @@
-#lang sicp
+#lang racket
 
 ;;;; Exercise 2.37
 
@@ -10,7 +10,7 @@
 
 (define (accumulate-n op initial sequences)
   (if (null? (car sequences))
-      nil
+      '()
       (cons (accumulate op initial (map car sequences))
             (accumulate-n op initial (map cdr sequences)))))
 
@@ -29,7 +29,7 @@
         (list 8 18))
 
 (define (transpose m)
-  (accumulate-n cons nil m))
+  (accumulate-n cons '() m))
 
 (equal? (transpose (list (list 1 2 3 4)
                          (list 5 6 7 8)))

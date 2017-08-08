@@ -1,6 +1,4 @@
-#lang sicp
-
-(#%require racket/base) ; for error to work
+#lang racket
 
 ;;;; Interval Arithmetic
 

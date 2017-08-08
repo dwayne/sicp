@@ -1,7 +1,6 @@
 #lang racket
 
 ;;;; Exercise 2.53
-;;;; N.B. I used #lang racket solely because it prints lists in a nicer way
 
 (list 'a 'b 'c)
 ; '(a b c)

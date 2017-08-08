@@ -1,4 +1,4 @@
-#lang sicp
+#lang racket
 
 ;;;; Exercise 2.33
 
@@ -9,7 +9,7 @@
           (accumulate op initial (cdr sequence)))))
 
 (define (my-map p sequence)
-  (accumulate (lambda (x y) (cons (p x) y)) nil sequence))
+  (accumulate (lambda (x y) (cons (p x) y)) '() sequence))
 
 (my-map (lambda (x) (* x x)) (list 1 2 3 4))
 
@@ -21,6 +21,6 @@
 (define (length sequence)
   (accumulate (lambda (x y) (+ y 1)) 0 sequence))
 
-(length nil)
+(length '())
 (length (list 1))
 (length (list 1 2))

@@ -1,14 +1,14 @@
-#lang sicp
+#lang racket
 
 ;;;; Exercise 2.32
 
 (define (subsets s)
   (if (null? s)
-      (list nil)
+      (list '())
       (let ((rest (subsets (cdr s))))
         (append rest (map (lambda (t) (cons (car s) t)) rest)))))
 
-(subsets nil)
+(subsets '())
 (subsets (list 1))
 (subsets (list 1 2))
 (subsets (list 1 2 3))

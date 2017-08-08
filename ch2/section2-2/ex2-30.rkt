@@ -1,4 +1,4 @@
-#lang sicp
+#lang racket
 
 ;;;; Exercise 2.30
 
@@ -10,7 +10,7 @@
 
 ; Direct implementation
 (define (square-tree-1 tree)
-  (cond ((null? tree) nil)
+  (cond ((null? tree) '())
         ((not (pair? tree)) (square tree))
         (else (cons (square-tree-1 (car tree))
                     (square-tree-1 (cdr tree))))))

@@ -1,9 +1,9 @@
-#lang sicp
+#lang racket
 
 ;;;; Exercise 2.28
 
 (define (fringe tree)
-  (cond ((null? tree) nil)
+  (cond ((null? tree) '())
         ((not (pair? tree)) (list tree))
         (else
          (append (fringe (car tree))

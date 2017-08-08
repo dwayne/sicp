@@ -1,8 +1,6 @@
-#lang sicp
+#lang racket
 
 ;;;; Finding roots of equations by the half-interval method
-
-(#%require racket/base) ; for error to work
 
 (define (half-interval-method f a b)
   (let ((a-value (f a))
